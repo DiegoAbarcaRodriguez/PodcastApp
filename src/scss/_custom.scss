@@ -1,0 +1,22 @@
+//Paleta de colores
+$verde:#84D9BC;
+$gris:#313C4E;
+
+//reasignación de valores de lasa variables de bootstrap
+$primary:$verde;
+$secondary:$gris;
+
+//Tipografía
+$headings-font-family: 'Poppins',sans-serif;
+$headings-font-weight: 700;
+$font-family-sans-serif: 'Poppins',sans-serif; //Funte global de todos los elementos menos los headings
+$font-size-base: 16px; //Cambia el tamaño base del texto de todas las etiquetas de HTML
+$font-size-root:62.5%; //1rem =10px
+
+$h1-font-size:4.5rem;
+$h2-font-size:3.6rem;
+$h3-font-size:3rem;
+
+$spacer:5rem; //Altera el valor que se emplea en el cálculo del padding y margin
+//Importar Boostrap
+@import'../../node_modules/bootstrap/scss/bootstrap.scss';

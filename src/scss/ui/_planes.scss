@@ -1,0 +1,48 @@
+@use '../custom' as *;
+@use '../utils/mixins' as m;
+
+
+$separacion:5rem; //Variable Local que almacena el espaciado comprenido para el card de negocio, y compensar su aumento de 5 pixeles en y a diferencia de los demás y pueda alinearse con el otro contenido de las otros cards
+.planes{
+    h2{
+        @include m.headingBorder($white,$primary);
+    }
+
+    .plan{
+        padding: 16rem 4rem 4rem 4rem;
+        border-bottom: 1px solid #e1e1e1;
+
+        @include media-breakpoint-up(md){
+            border:none;
+            @include transition(transform 300ms ease);
+           &:hover {
+                transform: scale(1.1);
+            }
+        }
+        .precio{
+            font-weight: 700;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        &.inicio{
+            @include m.bgIcono('../img/icono_inicio.svg');
+        }
+
+        &.negocio{
+            @include m.bgIcono('../img/icono_negocio.svg');
+            @include media-breakpoint-up(md){
+                margin-top: -#{$separacion};
+                margin-bottom: -#{$separacion};
+                border-radius: 2rem;
+                z-index: 100;
+                padding-top: calc(16rem + #{$separacion});
+                background-position: 50% calc(2rem + #{$separacion});
+            }
+        }
+
+        &.pro{
+            @include m.bgIcono('../img/icono_pro.svg');
+        }
+    }
+}
